@@ -10,7 +10,7 @@
 ## Быстрый старт
 
 ```bash
-git clone https://github.com/<ваш-username>/portfolio.git
+git clone https://github.com/inemkovich/portfolio.git
 cd portfolio
 python3 -m http.server 8080 --directory docs
 # открыть http://localhost:8080
@@ -70,7 +70,7 @@ portfolio/
 - [ ] **Этап 2 — Публикация репозитория.**
       1. Создайте пустой репозиторий `portfolio` на GitHub.
       2. `git init && git add -A && git commit -m "feat: initial portfolio scaffold"`
-      3. `git remote add origin https://github.com/<username>/portfolio.git`
+      3. `git remote add origin https://github.com/inemkovich/portfolio.git`
       4. `git push -u origin main`
       5. В Settings репозитория → Pages → Source: **GitHub Actions**.
       6. Проверьте, что оба workflow (`deploy`, `ci`) прошли успешно во
@@ -82,7 +82,7 @@ portfolio/
            `185.199.108.153`, `185.199.109.153`, `185.199.110.153`,
            `185.199.111.153`.
          - Для поддомена (`www` или `portfolio.example.com`): CNAME на
-           `<username>.github.io`.
+           `inemkovich.github.io`.
       3. В Settings → Pages впишите тот же домен в поле Custom domain и
          дождитесь автоматической выдачи HTTPS-сертификата (обычно до
          часа).
