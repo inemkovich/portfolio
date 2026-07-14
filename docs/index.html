@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Ваше Имя] — DevOps / SRE инженер</title>
+  <meta name="description" content="Портфолио [Ваше Имя] — DevOps-инженер: CI/CD, Kubernetes, Terraform, облачная инфраструктура.">
+  <meta name="theme-color" content="#12161c">
+
+  <!-- Open Graph / соцсети -->
+  <meta property="og:title" content="[Ваше Имя] — DevOps / SRE инженер">
+  <meta property="og:description" content="CI/CD, Kubernetes, Terraform, облачная инфраструктура.">
+  <meta property="og:type" content="website">
+  <!-- TODO: замените на реальный домен после привязки -->
+  <meta property="og:url" content="https://example.com/">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <a href="#" class="logo" aria-label="На главную">
+        <span class="user">user</span><span class="path">@portfolio:~$</span><span class="cursor">&nbsp;</span>
+      </a>
+
+      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Открыть меню">
+        ☰
+      </button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#about"><span class="flag">--</span>about</a></li>
+          <li><a href="#skills"><span class="flag">--</span>skills</a></li>
+          <li><a href="#experience"><span class="flag">--</span>experience</a></li>
+          <li><a href="#projects"><span class="flag">--</span>projects</a></li>
+          <li><a href="#contact"><span class="flag">--</span>contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="hero wrap">
+      <p class="hero-eyebrow" id="whoamiLine">$ whoami</p>
+      <h1>
+        [Ваше Имя]<br>
+        <span class="role">DevOps &amp; SRE инженер</span>
+      </h1>
+      <p class="hero-lede">
+        <!-- TODO: одна фраза о фокусе, например: -->
+        Строю CI/CD-пайплайны, инфраструктуру как код и наблюдаемость
+        для систем, которые не будят по ночам.
+      </p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">Смотреть проекты</a>
+        <a href="#contact" class="btn btn-ghost">Написать</a>
+      </div>
+      <div class="hero-status">
+        <span class="status-chip"><span class="status-dot"></span> open to work</span>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">about</p>
+        <h2>Обо мне</h2>
+      </div>
+      <p class="section-sub about-lede">
+        <!-- TODO: замените на реальный текст, 3-5 предложений -->
+        [Например: Занимаюсь эксплуатацией и автоматизацией инфраструктуры
+        последние N лет. Прошёл путь от системного администратора до DevOps-
+        инженера, строил CI/CD и Kubernetes-платформы для продуктов с
+        нагрузкой в сотни RPS. Люблю сокращать время между «commit» и
+        «production» и делать инфраструктуру предсказуемой и наблюдаемой.]
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">skills</p>
+        <h2>Стек и инструменты</h2>
+        <p class="section-sub">Оставьте только то, чем реально пользуетесь — качество важнее длины списка.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <p class="skill-card-label">Cloud &amp; Infra</p>
+          <div class="tag-row">
+            <span class="tag">AWS</span><span class="tag">DigitalOcean</span>
+            <span class="tag">GCP</span><span class="tag">Hetzner</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-label">CI/CD</p>
+          <div class="tag-row">
+            <span class="tag">GitHub Actions</span><span class="tag">GitLab CI</span>
+            <span class="tag">ArgoCD</span><span class="tag">Jenkins</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-label">Infrastructure as Code</p>
+          <div class="tag-row">
+            <span class="tag">Terraform</span><span class="tag">Ansible</span>
+            <span class="tag">Pulumi</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-label">Containers</p>
+          <div class="tag-row">
+            <span class="tag">Docker</span><span class="tag">Kubernetes</span>
+            <span class="tag">Helm</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-label">Observability</p>
+          <div class="tag-row">
+            <span class="tag">Prometheus</span><span class="tag">Grafana</span>
+            <span class="tag">Loki</span><span class="tag">ELK</span>
+          </div>
+        </div>
+        <div class="skill-card">
+          <p class="skill-card-label">Scripting</p>
+          <div class="tag-row">
+            <span class="tag">Bash</span><span class="tag">Python</span>
+            <span class="tag">Go</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE — pipeline run -->
+    <section id="experience" class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">experience</p>
+        <h2>Опыт работы</h2>
+        <p class="section-sub">Хронология реальная — порядок стадий здесь имеет значение, как в настоящем пайплайне.</p>
+      </div>
+
+      <div class="pipeline">
+        <!-- Текущее место — последний узел, отмечен как "running" -->
+        <div class="pipeline-node is-current">
+          <div class="pipeline-rail">
+            <span class="pipeline-dot"></span>
+            <span class="pipeline-line"></span>
+          </div>
+          <div class="pipeline-body">
+            <span class="pipeline-status">● running</span>
+            <div class="pipeline-meta">
+              <span class="pipeline-role">[Должность]</span>
+              <span class="pipeline-company">@ [Компания]</span>
+              <span class="pipeline-period">2023 — сейчас</span>
+            </div>
+            <ul>
+              <li>[Например: перевёл N сервисов на Kubernetes без простоя]</li>
+              <li>[Например: сократил время деплоя с 40 до 6 минут]</li>
+              <li>[Например: внедрил мониторинг на Prometheus + Grafana для всей платформы]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-rail">
+            <span class="pipeline-dot"></span>
+            <span class="pipeline-line"></span>
+          </div>
+          <div class="pipeline-body">
+            <span class="pipeline-status">✓ passed</span>
+            <div class="pipeline-meta">
+              <span class="pipeline-role">[Должность]</span>
+              <span class="pipeline-company">@ [Компания]</span>
+              <span class="pipeline-period">2021 — 2023</span>
+            </div>
+            <ul>
+              <li>[Результат №1]</li>
+              <li>[Результат №2]</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="pipeline-node">
+          <div class="pipeline-rail">
+            <span class="pipeline-dot"></span>
+            <span class="pipeline-line"></span>
+          </div>
+          <div class="pipeline-body">
+            <span class="pipeline-status">✓ passed</span>
+            <div class="pipeline-meta">
+              <span class="pipeline-role">[Должность]</span>
+              <span class="pipeline-company">@ [Компания]</span>
+              <span class="pipeline-period">2019 — 2021</span>
+            </div>
+            <ul>
+              <li>[Результат №1]</li>
+              <li>[Результат №2]</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">projects</p>
+        <h2>Проекты и кейсы</h2>
+        <p class="section-sub">Проблема → что сделал → результат. 3-6 качественных кейсов лучше, чем список из двадцати.</p>
+      </div>
+      <div class="projects-grid">
+
+        <article class="project-card">
+          <div class="tag-row">
+            <span class="tag">Terraform</span><span class="tag">DigitalOcean</span>
+          </div>
+          <h3 class="project-title">[Название проекта]</h3>
+          <p class="project-desc">
+            [Проблема в одном предложении] → [что сделали] → [измеримый результат].
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub →</a>
+            <a href="#">Demo →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag-row">
+            <span class="tag">Kubernetes</span><span class="tag">ArgoCD</span>
+          </div>
+          <h3 class="project-title">[Название проекта]</h3>
+          <p class="project-desc">
+            [Проблема в одном предложении] → [что сделали] → [измеримый результат].
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub →</a>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="tag-row">
+            <span class="tag">GitHub Actions</span><span class="tag">Bash</span>
+          </div>
+          <h3 class="project-title">[Название проекта]</h3>
+          <p class="project-desc">
+            [Проблема в одном предложении] → [что сделали] → [измеримый результат].
+          </p>
+          <div class="project-links">
+            <a href="#">GitHub →</a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section id="certifications" class="wrap reveal">
+      <div class="section-head">
+        <p class="eyebrow">certifications</p>
+        <h2>Сертификаты</h2>
+      </div>
+      <div class="cert-row">
+        <span class="cert-chip">AWS Certified Solutions Architect <time>2023</time></span>
+        <span class="cert-chip">CKA — Certified Kubernetes Administrator <time>2022</time></span>
+        <span class="cert-chip">HashiCorp Terraform Associate <time>2022</time></span>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="wrap contact reveal">
+      <div class="section-head">
+        <p class="eyebrow">contact</p>
+        <h2>Связаться</h2>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a href="#" id="emailLink">email</a>
+          <a href="https://github.com/">github</a>
+          <a href="https://www.linkedin.com/">linkedin</a>
+          <a href="/assets/resume.pdf">резюме (PDF)</a>
+        </div>
+        <span class="status-chip"><span class="status-dot"></span> open to work</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="wrap">
+    <div class="footer-row">
+      <span>© <span id="year"></span> [Ваше Имя]. Исходники на <a href="https://github.com/" class="link-slate">GitHub</a>.</span>
+      <span id="lastDeployed"></span>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

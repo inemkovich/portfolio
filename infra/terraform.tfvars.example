@@ -1,0 +1,8 @@
+# Скопируйте в terraform.tfvars и заполните реальными значениями.
+# terraform.tfvars уже в .gitignore — не попадёт в git по умолчанию.
+
+do_token      = "" # лучше не хранить тут — используйте TF_VAR_do_token
+github_repo   = "your-username/portfolio"
+github_branch = "main"
+region        = "fra"
+domain_name   = "" # например "portfolio.example.com"
