@@ -13,16 +13,30 @@
   var navLinks = document.getElementById("navLinks");
 
   if (navToggle && navLinks) {
-    navToggle.addEventListener("click", function () {
-      var isOpen = navLinks.classList.toggle("is-open");
+    var setMenuState = function (isOpen) {
+      navLinks.classList.toggle("is-open", isOpen);
       navToggle.setAttribute("aria-expanded", String(isOpen));
+      navToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Закрыть меню" : "Открыть меню"
+      );
+    };
+
+    navToggle.addEventListener("click", function () {
+      setMenuState(!navLinks.classList.contains("is-open"));
     });
 
     navLinks.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
-        navLinks.classList.remove("is-open");
-        navToggle.setAttribute("aria-expanded", "false");
+        setMenuState(false);
       });
+    });
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && navLinks.classList.contains("is-open")) {
+        setMenuState(false);
+        navToggle.focus();
+      }
     });
   }
 

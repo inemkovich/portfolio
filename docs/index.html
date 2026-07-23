@@ -14,8 +14,9 @@
   <!-- TODO: замените на реальный домен после привязки -->
   <meta property="og:url" content="https://example.com/">
 
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
 </head>
 <body>
 
@@ -155,7 +156,7 @@
             <div class="pipeline-meta">
               <span class="pipeline-role">[Должность]</span>
               <span class="pipeline-company">@ [Компания]</span>
-              <span class="pipeline-period">2023 — сейчас</span>
+              <span class="pipeline-period">[Год] — сейчас</span>
             </div>
             <ul>
               <li>[Например: перевёл N сервисов на Kubernetes без простоя]</li>
@@ -175,7 +176,7 @@
             <div class="pipeline-meta">
               <span class="pipeline-role">[Должность]</span>
               <span class="pipeline-company">@ [Компания]</span>
-              <span class="pipeline-period">2021 — 2023</span>
+              <span class="pipeline-period">[Год] — [Год]</span>
             </div>
             <ul>
               <li>[Результат №1]</li>
@@ -194,7 +195,7 @@
             <div class="pipeline-meta">
               <span class="pipeline-role">[Должность]</span>
               <span class="pipeline-company">@ [Компания]</span>
-              <span class="pipeline-period">2019 — 2021</span>
+              <span class="pipeline-period">[Год] — [Год]</span>
             </div>
             <ul>
               <li>[Результат №1]</li>
@@ -223,8 +224,8 @@
             [Проблема в одном предложении] → [что сделали] → [измеримый результат].
           </p>
           <div class="project-links">
-            <a href="#">GitHub →</a>
-            <a href="#">Demo →</a>
+            <span class="placeholder-link">[GitHub →]</span>
+            <span class="placeholder-link">[Demo →]</span>
           </div>
         </article>
 
@@ -237,7 +238,7 @@
             [Проблема в одном предложении] → [что сделали] → [измеримый результат].
           </p>
           <div class="project-links">
-            <a href="#">GitHub →</a>
+            <span class="placeholder-link">[GitHub →]</span>
           </div>
         </article>
 
@@ -250,7 +251,7 @@
             [Проблема в одном предложении] → [что сделали] → [измеримый результат].
           </p>
           <div class="project-links">
-            <a href="#">GitHub →</a>
+            <span class="placeholder-link">[GitHub →]</span>
           </div>
         </article>
 
@@ -264,9 +265,9 @@
         <h2>Сертификаты</h2>
       </div>
       <div class="cert-row">
-        <span class="cert-chip">AWS Certified Solutions Architect <time>2023</time></span>
-        <span class="cert-chip">CKA — Certified Kubernetes Administrator <time>2022</time></span>
-        <span class="cert-chip">HashiCorp Terraform Associate <time>2022</time></span>
+        <span class="cert-chip">[Название сертификата] <time>[Год]</time></span>
+        <span class="cert-chip">[Название сертификата] <time>[Год]</time></span>
+        <span class="cert-chip">[Название сертификата] <time>[Год]</time></span>
       </div>
     </section>
 
@@ -279,9 +280,9 @@
       <div class="contact-grid">
         <div class="contact-links">
           <a href="#" id="emailLink">email</a>
-          <a href="https://github.com/">github</a>
-          <a href="https://www.linkedin.com/">linkedin</a>
-          <a href="/assets/resume.pdf">резюме (PDF)</a>
+          <span class="contact-placeholder">[github]</span>
+          <span class="contact-placeholder">[linkedin]</span>
+          <span class="contact-placeholder">[резюме — PDF]</span>
         </div>
         <span class="status-chip"><span class="status-dot"></span> open to work</span>
       </div>
@@ -291,11 +292,11 @@
 
   <footer class="wrap">
     <div class="footer-row">
-      <span>© <span id="year"></span> [Ваше Имя]. Исходники на <a href="https://github.com/" class="link-slate">GitHub</a>.</span>
+      <span>© <span id="year"></span> [Ваше Имя]. Исходники: <span class="contact-placeholder">[GitHub]</span>.</span>
       <span id="lastDeployed"></span>
     </div>
   </footer>
 
-  <script src="/assets/js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 </html>
