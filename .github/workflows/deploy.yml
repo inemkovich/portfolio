@@ -1,7 +1,10 @@
 name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch: {}
+  workflow_run:
+    workflows: ["CI Checks"]
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read
@@ -14,23 +17,26 @@ concurrency:
 
 jobs:
   deploy:
-    # Проект ещё не принят: публикация запрещена, включая ручной запуск.
-    # Перед включением нужны разрешение пользователя и успешный CI
-    # для публикуемого коммита (см. AGENTS.md, раздел «Деплой»).
-    if: ${{ false }}
+    # Публикуем только успешный CI, запущенный push-событием для main.
+    if: >-
+      github.event.workflow_run.conclusion == 'success' &&
+      github.event.workflow_run.event == 'push'
     runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: Checkout tested commit
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ github.event.workflow_run.head_sha }}
+          persist-credentials: false
 
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
       - name: Upload site artifact
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: docs
 
@@ -38,8 +44,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Настройка после принятия проекта и разрешения на публикацию:
-# Settings → Pages → Source: "GitHub Actions" (НЕ "Deploy from a branch").
-# После первого успешного деплоя сайт будет доступен по адресу
+# Settings → Pages → Source: "GitHub Actions".
+# После успешного CI для push в main сайт будет доступен по адресу
 # https://<username>.github.io/portfolio/ (или по кастомному домену
 # из docs/CNAME, если он настроен).
