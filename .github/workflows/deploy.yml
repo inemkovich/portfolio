@@ -1,11 +1,6 @@
 name: Deploy to GitHub Pages
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - "docs/**"
-      - ".github/workflows/deploy.yml"
   workflow_dispatch: {}
 
 permissions:
@@ -19,6 +14,10 @@ concurrency:
 
 jobs:
   deploy:
+    # Проект ещё не принят: публикация запрещена, включая ручной запуск.
+    # Перед включением нужны разрешение пользователя и успешный CI
+    # для публикуемого коммита (см. AGENTS.md, раздел «Деплой»).
+    if: ${{ false }}
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -39,7 +38,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-# Настройка (один раз, вручную в UI GitHub):
+# Настройка после принятия проекта и разрешения на публикацию:
 # Settings → Pages → Source: "GitHub Actions" (НЕ "Deploy from a branch").
 # После первого успешного деплоя сайт будет доступен по адресу
 # https://<username>.github.io/portfolio/ (или по кастомному домену
