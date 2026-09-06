@@ -5,50 +5,49 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>[Ваше Имя] — DevOps / SRE инженер</title>
   <meta name="description" content="Портфолио [Ваше Имя] — DevOps-инженер: CI/CD, Kubernetes, Terraform, облачная инфраструктура.">
-  <meta name="theme-color" content="#12161c">
+  <meta name="theme-color" content="#4c5844">
 
   <!-- Open Graph / соцсети -->
   <meta property="og:title" content="[Ваше Имя] — DevOps / SRE инженер">
   <meta property="og:description" content="CI/CD, Kubernetes, Terraform, облачная инфраструктура.">
   <meta property="og:type" content="website">
-  <!-- TODO: замените на реальный домен после привязки -->
-  <meta property="og:url" content="https://example.com/">
+  <!-- TODO: обновите после привязки собственного домена -->
+  <meta property="og:url" content="https://inemkovich.github.io/portfolio/">
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <script>document.documentElement.classList.add("js");</script>
+  <!-- Черновой контент пока не должен попадать в поисковую выдачу. -->
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="stylesheet" href="assets/css/steam.css">
 </head>
 <body>
 
   <a class="skip-link" href="#main">Перейти к содержимому</a>
 
+  <div class="client-window">
   <header class="nav">
-    <div class="wrap">
-      <a href="#" class="logo" aria-label="На главную">
-        <span class="user">user</span><span class="path">@portfolio:~$</span><span class="cursor">&nbsp;</span>
+    <div class="title-bar">
+      <a href="#main" class="logo" aria-label="К началу портфолио">
+        <span class="client-icon" aria-hidden="true">&gt;_</span>
+        <span>portfolio</span>
       </a>
-
-      <button type="button" class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Открыть меню">
-        ☰
-      </button>
-
-      <nav>
-        <ul class="nav-links" id="navLinks">
-          <li><a href="#about"><span class="flag">--</span>about</a></li>
-          <li><a href="#skills"><span class="flag">--</span>skills</a></li>
-          <li><a href="#experience"><span class="flag">--</span>experience</a></li>
-          <li><a href="#projects"><span class="flag">--</span>projects</a></li>
-          <li><a href="#contact"><span class="flag">--</span>contact</a></li>
-        </ul>
-      </nav>
     </div>
+    <nav aria-label="Разделы портфолио">
+      <ul class="nav-links">
+        <li><a href="#about">Обо мне</a></li>
+        <li><a href="#skills">Инструменты</a></li>
+        <li><a href="#experience">Опыт</a></li>
+        <li><a href="#projects">Проекты</a></li>
+        <li><a href="#certifications">Сертификаты</a></li>
+        <li><a href="#contact">Контакты</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main id="main">
 
     <!-- HERO -->
     <section class="hero wrap">
-      <p class="hero-eyebrow" id="whoamiLine">$ whoami</p>
+      <p class="hero-eyebrow">Профиль инженера</p>
       <h1>
         [Ваше Имя]<br>
         <span class="role">DevOps &amp; SRE инженер</span>
@@ -296,6 +295,8 @@
       <span id="lastDeployed"></span>
     </div>
   </footer>
+
+  </div>
 
   <script src="assets/js/main.js"></script>
 </body>
